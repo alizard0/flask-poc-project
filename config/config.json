@@ -1,0 +1,12 @@
+{
+  "ip":"0.0.0.0",
+  "port":8888,
+  "smtp":"",
+  "smtp_port":"",
+  "page_title_email":"Account Recovery",
+  "site_url_email":"",
+  "site_name_email":"",
+  "email_smtp":"",
+  "pwd_smtp":"",
+  "app_name":""
+}

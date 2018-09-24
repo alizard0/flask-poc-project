@@ -1,0 +1,42 @@
+{% extends "index_t.html" %}
+{% block body %}
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation"><a href="/">Home</a></li>
+                    <li role="presentation"><a href="project">Project</a></li>
+                    <li role="presentation"><a href="login">Log in</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Project name</h3>
+        </div>
+
+        <div class="jumbotron">
+            <form class="form-signin" action="reset" method="POST">
+                <h3 class="pull-left">Reset your password.</h3>
+                <label for="inputPassword" class="sr-only">Your password.</label>
+                <input type="password" name="inputPassword" class="form-control" placeholder="your password"
+                       required autofocus>
+                <input type="text" name="inputId" hidden value={{ user }}>
+                <button class="btn btn-lg btn-default btn-block" type="submit">Complete</button>
+            </form>
+            {% if warningMessage %}
+                <div class="alert alert-danger" role="alert">{{ warningMessage }}</div>
+            {% endif %}
+            <!-- /container -->
+        </div>
+
+
+        <footer class="footer">
+            <p>&copy; Company 2014</p>
+        </footer>
+
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+{% endblock %}

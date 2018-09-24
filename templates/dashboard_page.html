@@ -1,0 +1,31 @@
+{% extends "index_t.html" %}
+{% block body %}
+    <div class="container">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation"><a>Hello, {{ session["email"] }}</a></li>
+                    <li role="presentation"><a href="logout">Logout</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Project name</h3>
+        </div>
+
+        <div class="jumbotron">
+            <h2>awesome dashboard!</h2>
+            <!-- /container -->
+        </div>
+
+
+        <footer class="footer">
+            <p>&copy; Company 2014</p>
+        </footer>
+
+    </div> <!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+{% endblock %}
